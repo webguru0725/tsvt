@@ -1,0 +1,235 @@
+.lava-playercontainer {
+	position: absolute;
+	top: 0;
+	bottom: 36px;
+	background: rgb(2, 23, 44);
+	color: #fff;
+	font-size: 12px;
+}
+.lava-playercontainer:after {
+	content:"";
+	display: block;
+	clear: both;
+}
+.lava-videotitle {
+	margin-left: 20px;
+	text-align: center;
+}
+.lava-playertoolbar {
+	position: absolute;
+	bottom: 0;
+	height:36px;
+	width:100%;
+	padding-left:4px;
+	background: #1b1918;
+}
+.lava-playertoolbar>.btn {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 5px 5px 4px 4px;
+	border: none;
+	background-image: url("/images/lava/icon.png");
+}
+.lava-playertoolbar>.btn:hover {
+	transition: none;
+}
+.lp-voice-on {
+	background-position: 0 -456px;
+}
+.lp-voice-on:hover {
+	background-position: -24px -456px;
+}
+.lp-voice-off {
+	background-position: 0 -480px;
+}
+.lp-voice-off:hover {
+	background-position: -24px -480px;
+}
+.lp-capture {
+	background-position: 0 0;
+}
+.lp-capture:hover {
+	background-position: -24px 0;
+}
+.lp-screen-on {
+	background-position: 0 -48px;
+}
+.lp-screen-on:hover{
+	background-position: -24px -48px;
+}
+.lp-screen-off {
+	background-position: 0 -72px;
+}
+.lp-screen-off:hover{
+	background-position: -24px -72px;
+}
+.lp-layout2 {
+	background-position: 0 -96px;
+}
+.lp-layout2:hover, .lp-layout2.selected {
+	background-position: -24px -96px;
+}
+.lp-layout3 {
+	background-position: 0 -120px;
+}
+.lp-layout3:hover, .lp-layout3.selected {
+	background-position: -24px -120px;
+}
+.lp-layout4 {
+	background-position: 0 -144px;
+}
+.lp-layout4:hover, .lp-layout4.selected {
+	background-position: -24px -144px;
+}
+.lp-layout6 {
+	background-position: 0 -168px;
+}
+.lp-layout6:hover, .lp-layout6.selected {
+	background-position: -24px -168px;
+}
+.lp-layout9 {
+	background-position: 0 -192px;
+}
+.lp-layout9:hover, .lp-layout9.selected {
+	background-position: -24px -192px;
+}
+.lp-layout10 {
+	background-position: 0 -216px;
+}
+.lp-layout10:hover, .lp-layout10.selected {
+	background-position: -24px -216px;
+}
+.lp-layout12 {
+	background-position: 0 -240px;
+}
+.lp-layout12:hover, .lp-layout12.selected {
+	background-position: -24px -240px;
+}
+.lp-layout16 {
+	background-position: 0 -264px;
+}
+.lp-layout16:hover, .lp-layout16.selected {
+	background-position: -24px -264px;
+}
+.lp-layout25 {
+	background-position: 0 -288px;
+}
+.lp-layout25:hover, .lp-layout25.selected {
+	background-position: -24px -288px;
+}
+.lp-layout36 {
+	background-position: 0 -312px;
+}
+.lp-layout36:hover, .lp-layout36.selected {
+	background-position: -24px -312px;
+}
+.lp-layout64 {
+	background-position: 0 -336px;
+}
+.lp-layout64:hover, .lp-layout64.selected {
+	background-position: -24px -336px;
+}
+
+.lp-contextmenu {
+	position: absolute;
+	z-index:10;
+	margin: 0;
+	min-width: 200px;
+	padding:3px 0;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 5px rgba(0,0,0,.35);
+	list-style: none;
+	background: #fff;
+	display: none;
+}
+.lp-contextmenu>li {
+	padding: 4px 20px;
+	font-size: 12px;
+}
+.lp-contextmenu>li:hover{
+	cursor: default;
+	background: #48f;
+	color: #fff;
+}
+
+.lp-div-capture {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 100000;
+	padding:20px 5px 5px 5px;
+	border: 1px solid #ddd;
+	background: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,.35);
+}
+.lp-div-capture>.lp-close {
+	position: absolute;
+	right: 4px;
+	top: 0;
+	padding: 1px;
+	color: #aaa;
+	cursor: pointer;
+}
+.lp-div-capture>.lp-close:hover{
+	color: #777;
+}
+.lp-progressdiv {
+	position: absolute;
+	top: 6px;
+	right: 2px;
+	display: none;
+}
+.lp-progressdiv>.btn-ignore, .lp-progressdiv>.btn-noremind {
+	margin-left: 5px;
+	color: #fff;
+	font-size: 13px;
+}
+.lp-a-flashplayer {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	padding-left: 20px;
+	margin-left: -50px;
+	color: #fff;
+	text-decoration: underline;
+}
+.lp-download {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 10px;
+	width: 10px;
+	background: #fff;
+}
+.lp-download:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -3px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: #fff transparent transparent transparent;
+	border-width: 8px 8px 0 8px;
+}
+.lp-prompt {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 40px 40px 0 40px;
+	background: #000;
+	color: #fff !important;
+	text-align: center;
+}
+.lp-prompt .lp-a-flashplayer {
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0;
+	color: #ff2;
+}

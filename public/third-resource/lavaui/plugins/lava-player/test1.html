@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>test</title>
+    
+    
+</head>
+    <body>
+        <video id="video1" style="height:400px;width:640px;"></video>
+        <div>
+            <button onclick="destroy()">destroy</button>
+            <button onclick="recreate()">recreate</button>
+            <button onclick="createVideo()">new video</button>
+        </div>
+    
+<script>
+            "use strict";
+            var flv = null;
+            var video = null;
+            window.onload = function () {
+                video = $("#video1")[0];
+                var url = "http://192.168.151.45:8080/live.flv?devid=00830007CB&chl=1&svrid=127.0.0.1&svrport=17891&st=1&dt=124&audio=1";
+                flv = flvjs.createPlayer({
+                    isLive: true,
+                    type: "flv",
+                    url: url
+                });
+                flv.attachMediaElement(video);
+                flv.load();
+                flv.play();
+                console.time(1);
+                flv.on(flvjs.Events.MEDIA_INFO, function() {
+                    console.log(123)
+                    // video.src = flv._msectl._mediaSourceObjectURL;
+                    console.timeEnd(1);
+                });
+            };
+            function destroy() {
+                flv.unload();
+                flv.destroy();
+                flv = null;
+            }
+            function recreate() {
+                var url = "http://192.168.151.45:8080/live.flv?devid=00830007CB&chl=1&svrid=127.0.0.1&svrport=17891&st=1&dt=124&audio=1";
+                flv = flvjs.createPlayer({
+                    isLive: true,
+                    type: "flv",
+                    url: url
+                });
+                var video = $("#video1")[0];
+                flv.attachMediaElement(video);
+                flv.load();
+                flv.play();
+            }
+            function createVideo() {
+                $("#video1").after("<video id='video2' height='400' width='600'></video>")[0];
+                $("#video2")[0].src = flv._msectl._mediaSourceObjectURL;
+            }
+        </script>
+<script src="../metronic47/global/plugins/jquery.min.js"></script>
+<script src="/third-resource/lavaui/plugins/flv/flv20170504.min1.js"></script>
+</body>
+</html>

@@ -1,0 +1,763 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>地图SDKApi说明</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            padding: 3px;
+        }
+        
+        .table {
+            text-align: center;
+            font-size: 12px;
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        .name {
+            border: 1px solid #BBB;
+            background-color: #6199DF;
+            color: white;
+        }
+        
+        .key {
+            border: 1px solid #BBB;
+            color: Green;
+        }
+        
+        .value {
+            border: 1px solid #BBB;
+        }
+        
+        .sign {
+            border: 1px solid #BBB;
+            color: Green;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width:100%; margin:0 auto;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td colspan="11" align="center">
+                        <h3>地图API接口文档说明</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="11" align="right">
+                        <h5>版本：3.0.0.0 作者:王德海</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name">构造函数</td>
+                    <td class="name">配置方法</td>
+                    <td class="name">参数说明</td>
+                    <td class="name">返回值</td>
+                    <td class="name">说明</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="key">CqrmMap(divId,mapKey)</td>
+                    <td class="value"></td>
+                    <td class="value">地图容器ID</td>
+                    <td class="value">None</td>
+                    <td class="value">构造地图SDK初始类</td>
+                </tr>
+                <tr>
+                    <td class="key" rowspan="7">SDK初始类</td>
+                    <td class="value">Map()</td>
+                    <td class="value">主要初始化地图和地图基本操作</td>
+                    <td class="value">Map类对象</td>
+                    <td class="value">实例化的地图类</td>
+                </tr>
+                <tr>
+                    <td class="value">Icon()</td>
+                    <td class="value">地图小图标类</td>
+                    <td class="value">Icon类对象</td>
+                    <td class="value">实例化的任意图标类</td>
+                </tr>
+                <tr>
+                    <td class="value">CarIcon()</td>
+                    <td class="value">车辆图标类</td>
+                    <td class="value">CarIcon类对象</td>
+                    <td class="value">实例化的单个车辆图标类</td>
+                </tr>
+                <tr>
+                    <td class="value">Line()</td>
+                    <td class="value">地图线路类</td>
+                    <td class="value">Line类对象</td>
+                    <td class="value">实例化的地图线路类</td>
+                </tr>
+                <tr>
+                    <td class="value">Fence()</td>
+                    <td class="value">地图多边形类</td>
+                    <td class="value">Fence类对象</td>
+                    <td class="value">实例化的地图多边形类</td>
+                </tr>
+                <tr>
+                    <td class="value">Circle()</td>
+                    <td class="value">地图圆形类</td>
+                    <td class="value">Circle类对象</td>
+                    <td class="value">实例化的地图圆形类</td>
+                </tr>
+                <tr>
+                    <td class="value">Rectangle()</td>
+                    <td class="value">地图多边形类</td>
+                    <td class="value">Rectangle类对象</td>
+                    <td class="value">实例化的地图多边形类</td>
+                </tr>
+                <tr>
+                    <td class="key" rowspan="16">Map类</td>
+                    <td class="value">getCenter()</td>
+                    <td class="value">None</td>
+                    <td class="value">"lat,lng"</td>
+                    <td class="value">获取地图中心坐标</td>
+                </tr>
+                <tr>
+                    <td class="value">getBounds()</td>
+                    <td class="value">None</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">获取地图范围内的东北点和西南点</td>
+                </tr>
+                <tr>
+                    <td class="value">setCenter(lat,lng)</td>
+                    <td class="value">lat纬度、lng经度</td>
+                    <td class="value">None</td>
+                    <td class="value">设置地图中心坐标</td>
+                </tr>
+                <tr>
+                    <td class="value">getZoom()</td>
+                    <td class="value">None</td>
+                    <td class="value">number</td>
+                    <td class="value">获取地图当前缩放级别</td>
+                </tr>
+                <tr>
+                    <td class="value">setZoom(number)</td>
+                    <td class="value">int</td>
+                    <td class="value">None</td>
+                    <td class="value">设置地图为指定缩放级别</td>
+                </tr>
+                <tr>
+                    <td class="value">setMaxZoom(number)</td>
+                    <td class="value">int</td>
+                    <td class="value">None</td>
+                    <td class="value">设置地图最大缩放级别</td>
+                </tr>
+                <tr>
+                    <td class="value">setMinZoom(number)</td>
+                    <td class="value">int</td>
+                    <td class="value">None</td>
+                    <td class="value">设置地图最小缩放级别</td>
+                </tr>
+                <tr>
+                    <td class="value">resize()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">使地图适应容器变化</td>
+                </tr>
+                <tr>
+                    <td class="value">getPosition(lat,lng,backFun)</td>
+                    <td class="value">纬度、经度、回调函数</td>
+                    <td class="value">回调函数,内容为地点描述信息</td>
+                    <td class="value">获取指定点的地理位置信息</td>
+                </tr>
+                <tr>
+                    <td class="value">searchPosition(address,backFun)</td>
+                    <td class="value">地理位置描述,回调函数</td>
+                    <td class="value">回调函数,内容为"lat,lng"</td>
+                    <td class="value">通过地理位置获取第一个符合的点坐标</td>
+                </tr>
+                <tr>
+                    <td class="value">boxZoomInOrZoomOut(string)</td>
+                    <td class="value">'in'放大，'out'缩小</td>
+                    <td class="value">None</td>
+                    <td class="value">拉框放大，拉框缩小</td>
+                </tr>
+                <tr>
+                    <td class="value">getUserLocation(backFun)</td>
+                    <td class="value">回调函数</td>
+                    <td class="value">backFun(String)</td>
+                    <td class="value">获取用户地理位置经纬度</td>
+                </tr>
+                <tr>
+                    <td class="value">addEventListener(backFun)</td>
+                    <td class="value">回调函数</td>
+                    <td class="value">backFun(eventName,eventObj)</td>
+                    <td class="value">获取地图监听事件(onzoomend/ondragend/onresize)</td>
+                </tr>
+                <tr>
+                    <td class="value">pointToPixel(lat,lng)</td>
+                    <td class="value">经纬度</td>
+                    <td class="value">像素点(x,y)</td>
+                    <td class="value">经纬度转像素点</td>
+                </tr>
+                <tr>
+                    <td class="value">pixelToPoint(x,y)</td>
+                    <td class="value">像素点</td>
+                    <td class="value">经纬度(lat,lng)</td>
+                    <td class="value">像素点转换经纬度</td>
+                </tr>
+                <tr>
+                    <td class="value">isPointInPolygon(latlng,[latlng])</td>
+                    <td class="value">点(lat,lng),多边形点数组</td>
+                    <td class="value">结果(bool)</td>
+                    <td class="value">判断点是否在多边形</td>
+                </tr>
+                <tr>
+                    <td class="key" rowspan="10">Icon类</td>
+                    <td class="value">getPosition()</td>
+                    <td class="value">None</td>
+                    <td class="value">String</td>
+                    <td class="value">获取Icon图标位置</td>
+                </tr>
+                <tr>
+                    <td class="value">getIcon()</td>
+                    <td class="value">None</td>
+                    <td class="value">String</td>
+                    <td class="value">获取Icon图标图片地址</td>
+                </tr>
+                <tr>
+                    <td class="value">clear()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">清理加载的图标</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setIcon(path,?size,?anchor)</td>
+                    <td class="value">图片相对路径;width,height;x,y</td>
+                    <td class="value">None</td>
+                    <td class="value">设置图标图片</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">drawSign(optionObj)</td>
+                    <td class="value">配置对象:{content:'内容',callBack}</td>
+                    <td class="value">回调</td>
+                    <td class="value">鼠标绘制图标</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadIcon</br>(id,latlng,imgPath,content,clickBackFun,?size,?anchor)</td>
+                    <td class="value">标示id,经纬度字符串、图片路径、气泡内容,点击回调id、width,height;x,y</td>
+                    <td class="value">None</td>
+                    <td class="value">加载图标</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setInfoWindowContent</br>(content)</td>
+                    <td class="value">内容</td>
+                    <td class="value">None</td>
+                    <td class="value">设置气泡内容</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">openInfoWindow</br>(flag)</td>
+                    <td class="value">布尔</td>
+                    <td class="value">None</td>
+                    <td class="value">打开或关闭气泡</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadIconAndOpenInfoWindow</br>(id,latlng,imgPath,content,clickBackFun)</td>
+                    <td class="value">标示id,经纬度字符串、图片路径、气泡内容,点击回调id</td>
+                    <td class="value">None</td>
+                    <td class="value">加载图标并打开气泡</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadCustomIcon(latlng,customHtml)</td>
+                    <td class="value">经纬度字符串,自定义html对象</td>
+                    <td class="value">None</td>
+                    <td class="value">加载用户自定义html覆盖物</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="key" rowspan="7">CarIcon类</td>
+                    <td class="value">load(gpsObj,clickBackFun)</td>
+                    <td class="value">GPS对象{Carlicense:'xxx',GpsLat:120.11,GpsLng:110.11,Direction:240,Status:1},点击回调车牌</td>
+                    <td class="value">String</td>
+                    <td class="value">加载车辆图标</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setInfoWindowContent(content)</td>
+                    <td class="value">内容</td>
+                    <td class="value">None</td>
+                    <td class="value">设定气泡内容</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">clear()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">清理车辆图标</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setZIndex(number)</td>
+                    <td class="value">层数字</td>
+                    <td class="value">None</td>
+                    <td class="value">设置车连图标显示层级</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setBorderColor(hexColor)</td>
+                    <td class="value">16进制颜色(默认‘#9C9C9C’)</td>
+                    <td class="value">None</td>
+                    <td class="value">设置车辆边框颜色</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setPosition(gps)</td>
+                    <td class="value">GPS对象</td>
+                    <td class="value">None</td>
+                    <td class="value">设置车辆图标位置</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">getCenter()</td>
+                    <td class="value">None</td>
+                    <td class="value">latlng|String</td>
+                    <td class="value">获取车辆图标经纬度位置字符串</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="key" rowspan="8">Line类</td>
+                    <td class="value">drawLine()</td>
+                    <td class="value"></td>
+                    <td class="value"></td>
+                    <td class="value">绘制路线</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadLine(lineData)</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">None</td>
+                    <td class="value">加载路线</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">addHandlerEvent(name,backfun)</td>
+                    <td class="value">name为操作的方式，比如"click",backfun为回调函数</td>
+                    <td class="value">回调内容为操作的点的（lat,lng）经纬度</td>
+                    <td class="value">为路线增加事件</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">getPath()</td>
+                    <td class="value">None</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">返回路线的经纬度</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setPath(latlng)</td>
+                    <td class="value">latlng是经纬度字符串"lat,lng;lat,lng"</td>
+                    <td class="value">None</td>
+                    <td class="value">重新加载路线</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">getDistance(unit)</td>
+                    <td class="value">unit测量单位(k=km,m=mi),不填为km</td>
+                    <td class="value">None</td>
+                    <td class="value">在绘制路线时测量距离</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">clear()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">清除地图上的路线</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">moveAndZoom()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">移动到视窗并缩放</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="key" rowspan="7">Fence类</td>
+                    <td class="value">drawFence()</td>
+                    <td class="value"></td>
+                    <td class="value"></td>
+                    <td class="value">绘制围栏</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">getPath()</td>
+                    <td class="value">None</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">返回围栏的点的坐标集合</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setPath(latlng)</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">None</td>
+                    <td class="value">重新绘制围栏参数为围栏的坐标集合</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadFence(latlng)</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">None</td>
+                    <td class="value">加载围栏</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadFenceAndEdit(latlng)</td>
+                    <td class="value">"lat,lng;lat,lng"</td>
+                    <td class="value">None</td>
+                    <td class="value">加载可编辑的围栏</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">clear()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">清除地图上的围栏</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">moveAndZoom()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">移动到视窗并缩放</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="key" rowspan="5">Circle类</td>
+                    <td class="value">drawCircle()</td>
+                    <td class="value"></td>
+                    <td class="value"></td>
+                    <td class="value">绘制圆</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setPath(latlng,r)</td>
+                    <td class="value">latlng为圆心坐标，r为半径大小</td>
+                    <td class="value">None</td>
+                    <td class="value">重新绘制圆</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">getPath()</td>
+                    <td class="value">None</td>
+                    <td class="value">"lat,lng;R"返回圆形的圆心位置和半径大小</td>
+                    <td class="value">返回圆的位置</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadCircle(latlng,r)</td>
+                    <td class="value">latlng为圆心位置，r为半径大小</td>
+                    <td class="value">None</td>
+                    <td class="value">加载圆</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">clear()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">清除地图上的圆</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="key" rowspan="5">Rectangle类</td>
+                    <td class="value">drawRectangle()</td>
+                    <td class="value"></td>
+                    <td class="value"></td>
+                    <td class="value">绘制圆矩形</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">setPath(latlng)</td>
+                    <td class="value">latlng为左上角和右下角的坐标（lat1,lng1;lat2,lng2）</td>
+                    <td class="value">None</td>
+                    <td class="value">重新绘制矩形</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">getPath()</td>
+                    <td class="value">None</td>
+                    <td class="value">"lat1,lng1;lat2,lng2"</td>
+                    <td class="value">获取矩形的左下角和右上角的坐标</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">clear()</td>
+                    <td class="value">None</td>
+                    <td class="value">None</td>
+                    <td class="value">清除地图上的矩形</td>
+
+
+
+
+
+
+
+                </tr>
+                <tr>
+                    <td class="value">loadRectangle(latlng)</td>
+                    <td class="value">latlng为左下角和右上角的坐标的字符串"lat1,lng1;lat2,lng2"</td>
+                    <td class="value">None</td>
+                    <td class="value">在地图上加载矩形</td>
+
+
+
+
+
+
+
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="11" align="center">
+                        <h5>版权所有:重庆锐明信息技术有限公司</h5>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

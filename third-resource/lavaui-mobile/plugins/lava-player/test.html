@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>test</title>
+    
+    <link rel="stylesheet" href="/plugins/lava-player/style/lava-player.css" />
+</head>
+    <body>
+        <div id="div_video" style="width:600px;height:500px;background:#003;position:relative;"></div>
+        <div>你&emsp;好</div>
+        <div>你好好</div>
+    
+<script>
+            window.onload = function() {
+                $("#div_video").lavaPlayer({
+                    playType: "html5",
+                    layoutNum: 12,
+                    streamToggle: true, 
+                    langObj: {
+                        openVideo: lang.openVideo,
+                        openAllVideo: lang.openAllVideo,
+                        closeVideo: lang.closeVideo,
+                        closeAllVideo: lang.closeAllVideo,
+                        clearVideo: lang.clearVideo,
+                        clearAllVideo: lang.clearAllVideo,
+                        ignore: lang.ignore,
+                        noRemind: lang.noRemind,
+                        mainStream: lang.mainStream,
+                        subStream: lang.subStream,
+                        closeVideoPrompt: lang.closeVideoPrompt,
+                        noFlash: lang.noFlash,
+						noInstallFlash: lang.noInstallFlash,
+						installedFlash: lang.installedFlash,
+						clickHere: lang.clickHere,
+						iePrompt: lang.iePrompt,
+						firefoxPrompt: lang.firefoxPrompt,
+						chromePrompt: lang.chromePrompt,
+						operaPrompt: lang.operaPrompt,
+						edgePrompt: lang.edgePrompt
+                    },
+                    onReady: function() {
+                        console.log($("video").length);
+                        for (var i = 0; i < 4; i++) {
+                            var video = $("video")[i];
+                            if (i < 6){
+                                var url = "http://192.168.151.45:8080/live.flv?devid=00830007CB&chl="+(i+1)+"&svrid=127.0.0.1&svrport=17891&st=0&dt=124&audio=1";
+                            } else {
+                                var url = "http://192.168.151.45:8081/live.flv?devid=00830007CB&chl="+(i+1)+"&svrid=127.0.0.1&svrport=17891&st=0&dt=124&audio=1";
+
+                            }
+                            // liveplay(video, url);
+                            // $("#div_video").lavaPlayer("addVideo", {url: url, title: 11});
+                        }
+                    }
+                });
+                /*setInterval(function() {
+                    var i = "Error: http://192.168.151.45:8080/live.flv?devid=00830007CB&chl=&svrid=127.0.0.1&svrport=17891&st=0&dt=124&audio=1";
+                    console.error(i);
+                }, 1);*/
+                
+            };
+        </script>
+<script src="../metronic47/global/plugins/jquery.min.js"></script>
+<script src="../../locale/zh-CN/lang.js"></script>
+<script src="/plugins/lava-player/js/lava-player.js"></script>
+</body>
+</html>

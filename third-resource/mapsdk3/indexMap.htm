@@ -1,0 +1,28 @@
+<html>
+<head>
+<script language="javascript" type="text/javascript" src="/third-resource/mapsdk3/config.js"></script>
+<script language="javascript" type="text/javascript">
+    var map, gmap;
+    window.onload = function () {
+        var config = new Map_Config("GMap", function () {
+            //web始
+            //parent.Map_LoadMap();  //网页中使用
+            //web终
+            //winform始
+            try {
+                if (gmap) return;
+                map = new CqrmMap("map");
+                gmap = map.Map();
+            } catch (e) {
+                alert(e);
+            };
+            //winform终
+        });
+    }
+</script>
+    <title></title>
+</head>
+<body style=" margin:0; padding:0;">
+   <div id="map" style="position:relative; width:100%; height:100%;"></div>
+</body>
+</html>
