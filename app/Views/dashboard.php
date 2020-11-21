@@ -1,2 +1,1 @@
-<?php echo $map['js']; ?>
-<?php echo $map['html']; ?>
+<?php print_r("sdf");?>

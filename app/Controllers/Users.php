@@ -1,12 +1,14 @@
 <?php namespace App\Controllers;
 
 use App\Models\UserModel;
+use CodeIgniter\Config\Config;
 
 
 class Users extends BaseController
 {
 	public function index()
 	{
+		$validation =  \Config\Services::validation();
 		$data = [];
 		helper(['form']);
 
@@ -143,10 +145,22 @@ class Users extends BaseController
 
 	public function login(){
 		$email = $this->request->getPost('email');
-		$password = $this->request->getPost('password');
-		print_r($email);
-		print_r(RSAString($password));
-		exit;
+		$password = sha1($this->request->getPost('password'));
+	
+		$model = new UserModel();
+		$user = $model->where('UserName', $email)->first();
+	
+		if(is_null($user))
+		{
+			print_r("No match user"); exit;
+		}
+		if(strtoupper($password) === $user['UserPassword'])
+		{
+			return redirect()->to('dashboard');
+		}
+		else{
+			print_r("No match password"); exit;
+		}
 	}
 
 	public function logout(){

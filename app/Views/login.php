@@ -17,7 +17,7 @@
             <?= session()->get('success') ?>
           </div>
         <?php endif; ?>
-        <form class="" action="user/login" method="post">
+        <form class="" action="<?= site_url('login'); ?>" method="post">
           <div class="form-group">
            <label for="email">Email address</label>
            <input type="text" class="form-control" name="email" id="email" value="<?= set_value('email') ?>">

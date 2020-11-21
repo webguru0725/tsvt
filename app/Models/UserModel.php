@@ -31,5 +31,12 @@ class UserModel extends Model{
     return $data;
   }
 
+  // public function getUser()
+  // {
+  //   $this->db->findall;
+  //   $this->db->from($table);
+  //   $query = $this->db->get();
+  //   return $query->result_array();
+  // }
 
 }

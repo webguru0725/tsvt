@@ -59,10 +59,10 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $tests = [
 		'DSN'      => '',
-		'hostname' => '127.0.0.1',
-		'username' => '',
-		'password' => '',
-		'database' => ':memory:',
+		'hostname' => 'localhost',
+		'username' => 'root',
+		'password' => '123456',
+		'database' => 'wcms4',
 		'DBDriver' => 'SQLite3',
 		'DBPrefix' => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
 		'pConnect' => false,
