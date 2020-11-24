@@ -71,80 +71,6 @@
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="javascript:;" class="menu-link menu-toggle">
-                                    <i class="menu-icon flaticon2-telegram-logo"></i>
-                                    <span class="menu-text">Basic</span>
-                                    <i class="menu-arrow"></i>
-                                </a>
-                                <div class="menu-submenu">
-                                    <i class="menu-arrow"></i>
-                                    <ul class="menu-subnav">
-                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                            <span class="menu-link">
-                                                <span class="menu-text">Basic</span>
-                                            </span>
-                                        </li>
-                                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                            <a href="javascript:;" class="menu-link menu-toggle">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Quick Add</span>
-                                                <i class="menu-arrow"></i>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Fleet</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Vehicle</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Driver file</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">User Role</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Driver Faces</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Batch Upgrade Equipment</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="javascript:;" class="menu-link menu-toggle">
                                     <i class="menu-icon flaticon2-laptop"></i>
                                     <span class="menu-text">LiveView</span>
                                     <i class="menu-arrow"></i>
@@ -163,13 +89,7 @@
                             <li class="menu-item" aria-haspopup="true">
                                 <a href="<?= site_url('playback'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-console"></i>
-                                    <span class="menu-text">Playback</span>
-                                </a>
-                            </li>
-                            <li class="menu-item" aria-haspopup="true">
-                                <a href="<?= site_url('playback'); ?>" class="menu-link">
-                                    <i class="menu-icon flaticon2-console"></i>
-                                    <span class="menu-text">Evidence</span>
+                                    <span class="menu-text">Evidence Center</span>
                                 </a>
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
@@ -194,182 +114,49 @@
                                                 <span class="menu-text">Report Dashboard</span>
                                             </a>
                                         </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">GPS Position Statistics</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Alarm Statistics</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">User Operation Log</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">OverSpeed Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">User Online/Offline Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Mileage Statistics</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Driving Time Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Online Rate Statistics</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Emergency Button Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Motion Alarm Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Last Status Log</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Fence Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">IO Alarm Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Temperature Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Device Flow Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">User Flow Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">People Counting Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Flow Config Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Alarm Frequency Abnormal Report</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Driver Face Comparing Reports</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="#" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Swipe Card Report</span>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="#" class="menu-link">
-                                    <i class="menu-icon flaticon2-graph-1"></i>
-                                    <span class="menu-text">Setting</span>
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon flaticon2-telegram-logo"></i>
+                                    <span class="menu-text">Settings</span>
+                                    <i class="menu-arrow"></i>
                                 </a>
+                                <div class="menu-submenu">
+                                    <i class="menu-arrow"></i>
+                                    <ul class="menu-subnav">
+                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                            <span class="menu-link">
+                                                <span class="menu-text">Settings</span>
+                                            </span>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="<?= site_url('fleet'); ?>" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Fleet</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Vehicle</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Camera</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                         <!--end::Menu Nav-->
@@ -383,30 +170,23 @@
                     <div class="container-fluid d-flex align-items-stretch justify-content-between">
                         <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
                             <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-                                <ul class="menu-nav">
-                                    <li class="menu-item menu-item-active" aria-haspopup="true">
-                                        <a href="#" class="menu-link">
-                                            <span class="menu-text">Dashboard</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                               
                             </div>
                         </div>
                         <div class="topbar">
                             <div class="topbar-item">
                                 <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
                                     <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                                    <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
-                                    <span class="symbol symbol-35 symbol-light-success">
-                                        <span class="symbol-label font-size-h5 font-weight-bold">S</span>
-                                    </span>
+                                    <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?></span>
                                 </div>
+                                <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?php echo date("Y-m-d H:i:s"); ?></span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <div class="d-flex flex-column-fluid">
+                        <div class="container">
+                  
     
         

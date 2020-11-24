@@ -48,10 +48,8 @@ class Users extends BaseController
 
 	private function setUserSession($user){
 		$data = [
-			'id' => $user['id'],
-			'firstname' => $user['firstname'],
-			'lastname' => $user['lastname'],
-			'email' => $user['email'],
+			'id' => $user['ID'],
+			'username' => $user['UserName'],
 			'isLoggedIn' => true,
 		];
 
@@ -156,7 +154,11 @@ class Users extends BaseController
 		}
 		if(strtoupper($password) === $user['UserPassword'])
 		{
-			return redirect()->to('dashboard');
+			$model = new UserModel();
+			$user = $model->where('UserName', $email)
+										->first();
+			$this->setUserSession($user);
+			return redirect()->to('fleet');
 		}
 		else{
 			print_r("No match password"); exit;
