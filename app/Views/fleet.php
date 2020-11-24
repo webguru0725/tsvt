@@ -20,7 +20,7 @@
                             $folders_arr = array();
                             foreach($fleets as $row) : 
                                 $parentid = $row['GroupFatherID'];
-                                echo $parentid;
+                                // echo $parentid;
                             endforeach
                             
                             // while($row = mysqli_fetch_assoc($fleets)){
@@ -43,7 +43,7 @@
                         ?>
                         <div id="folder_jstree">
                         </div>
-                        <textarea id="txt_folderjsondata"></textarea>
+                        <!-- <textarea id="txt_folderjsondata"></textarea> -->
                     </div>
                     <!--end::Row-->
                     <!--begin::Row-->
