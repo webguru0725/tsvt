@@ -28,6 +28,31 @@ class Fleet extends BaseController
 
     }
 
+    public function fleets_ajax_get()
+    {
+        $table = "groupinfo";
+        $model = new FleetModel();
+        $fleets = $model->findAll();
+        $new_fleets = array();
+        foreach($fleets as $fleet)
+        {
+            $fleet['fatherName'] = "";
+            foreach($fleets as $row)
+            {
+                if($fleet['GroupFatherID'] === $row['ID'])
+                {
+                    $fleet['fatherName'] = $row['GroupName'];
+                }
+            }
+            $new_fleets[] = $fleet;
+        }
+        $data['fleets'] = $new_fleets;
+        echo json_encode($data);
+        // $data1['fleets'] = $fleets;
+       
+        // echo json_encode($data1);
+    }
+
 	//--------------------------------------------------------------------
 
 }
