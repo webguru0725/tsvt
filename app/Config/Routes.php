@@ -37,6 +37,7 @@ $routes->match(['get','post'],'profile', 'Users::profile',['filter' => 'auth']);
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/playback', 'Playback::index');
 $routes->get('/fleet', 'Fleet::index');
+$routes->get('/vehicle', 'Vehicle::index');
 
 
 
