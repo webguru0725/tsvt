@@ -15,6 +15,7 @@
 	<script src="assets/js/scripts.bundle.js"></script>
 	<script src="assets/js/jstree.bundle.js"></script>
 	<script src="assets/js/treeview.js"></script>
+	<script src="assets/js/apexcharts.js"></script>
 	<!--end::Global Theme Bundle-->
 	<!--begin::Page Vendors(used by this page)-->
 	<script src="assets/js/fullcalendar.bundle.js"></script>

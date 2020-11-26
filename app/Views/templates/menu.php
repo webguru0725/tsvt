@@ -63,31 +63,20 @@
                     <div id="kt_aside_menu" class="aside-menu" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
                         <!--begin::Menu Nav-->
                         <ul class="menu-nav">
-                            <li class="menu-item menu-item-active" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="<?= site_url('dashboard'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-architecture-and-city"></i>
                                     <span class="menu-text">Dashboard</span>
                                 </a>
                             </li>
-                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="javascript:;" class="menu-link menu-toggle">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="<?= site_url('fleet'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-laptop"></i>
                                     <span class="menu-text">LiveView</span>
-                                    <i class="menu-arrow"></i>
                                 </a>
-                                <div class="menu-submenu">
-                                    <i class="menu-arrow"></i>
-                                    <ul class="menu-subnav">
-                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
-                                            <span class="menu-link">
-                                                <span class="menu-text">LiveView</span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="<?= site_url('playback'); ?>" class="menu-link">
+                                <a href="<?= site_url('fleet'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-console"></i>
                                     <span class="menu-text">Evidence Center</span>
                                 </a>

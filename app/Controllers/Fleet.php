@@ -21,8 +21,9 @@ class Fleet extends BaseController
         $model = new FleetModel();
         $fleets = $model->findAll();
         $data['fleets'] = $fleets;
+        $data_header['menu_index'] = "fleet";
         echo view('templates/header');
-		echo view('templates/menu');
+		echo view('templates/menu', $data_header);
 		echo view('fleet', $data);
 		echo view('templates/footer');
 
