@@ -9,6 +9,7 @@ class Fleet extends BaseController
         $this->session = \Config\Services::session();
 		$data = [];
         $this->fleets_get();
+        
 		// echo view('templates/header');
 		// echo view('templates/menu');
 		// echo view('fleet');
@@ -27,6 +28,38 @@ class Fleet extends BaseController
 		echo view('fleet', $data);
 		echo view('templates/footer');
 
+    }
+
+    public function fleet_update_ajax_post()
+    {
+        $model = new FleetModel();
+        $id = $this->request->getPost('id');
+        $name = $this->request->getPost('name');
+        $parent_id = $this->request->getPost('parent_id');
+        $remark = $this->request->getPost('remark');
+        $data = [
+            'GroupName' => $name,
+            'GroupFatherID' => $parent_id,
+            'Remark' => $remark
+        ];
+        $save = $model->update($id, $data);
+        echo json_encode($save);
+    }
+
+    public function fleet_add_ajax_post()
+    {
+        $model = new FleetModel();
+        $name = $this->request->getPost('name');
+        $parent_id = $this->request->getPost('parent_id');
+        $remark = $this->request->getPost('remark');
+        $data = [
+            'GroupName' => $name,
+            'GroupFatherID' => $parent_id,
+            'Remark' => $remark
+        ];
+        $save = $model->insert($data);
+        echo json_encode($save);
+        
     }
 
     public function fleets_ajax_get()
@@ -48,6 +81,17 @@ class Fleet extends BaseController
             $new_fleets[] = $fleet;
         }
         $data['fleets'] = $new_fleets;
+        echo json_encode($data);
+        // $data1['fleets'] = $fleets;
+       
+        // echo json_encode($data1);
+    }
+
+    public function fleet_ajax_get($id)
+    {
+        $table = "groupinfo";
+        $model = new FleetModel();
+        $data['fleet'] = $model->where('ID', $id)->first();
         echo json_encode($data);
         // $data1['fleets'] = $fleets;
        

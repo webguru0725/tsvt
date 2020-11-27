@@ -20,6 +20,7 @@
 		<link href="assets/css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/jstree.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->

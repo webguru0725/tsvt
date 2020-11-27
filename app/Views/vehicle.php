@@ -6,11 +6,6 @@
                 <div class="card-title">
                     <h3 class="card-label">Basic Tree</h3>
                 </div>
-                <div class="card-toolbar">
-                    <div class="example-tools justify-content-center">
-                        <span class="example-toggle example-toggled" data-toggle="tooltip" title="" data-original-title="View code"></span>
-                    </div>
-                </div>
             </div>
             <div class="card-body">
             <div id="kt_tree_1" class="tree-demo">
@@ -34,28 +29,6 @@
                                     </ul>
                                 </li>
                             <?php }} ?>
-                            <!-- <li data-jstree='{ "opened" : true }'>
-                                initially open
-                                <ul>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                </ul>
-                            </li>
-                            <li data-jstree='{ "opened" : true }'>
-                                initially open
-                                <ul>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                </ul>
-                            </li> -->
                         </ul>
                     </li>
                 </ul>
@@ -69,11 +42,11 @@
             <!--begin::Header-->
             <div class="card-header border-0 py-5">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label font-weight-bolder text-dark">All Fleets</span>
+                    <span class="card-label font-weight-bolder text-dark">All Vehicles</span>
                     <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new fleets</span>
                 </h3>
                 <div class="card-toolbar">
-                    <a href="#" class="btn btn-info font-weight-bolder font-size-sm">Add</a>
+                    <a href="#" class="btn btn-info font-weight-bolder font-size-sm" data-target="#stack1" data-toggle="modal">Add</a>
                 </div>
             </div>
             <!--end::Header-->
@@ -156,6 +129,167 @@
             <!--end::Body-->
         </div>
     </div>
+</div>
+<div id="stack1" class="modal fade" tabindex="-1" data-width="400"> 
+    <div class="modal-dialog"> 
+        <div class="modal-content"> 
+            <div class="modal-header"> 
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button> 
+                <h4 class="modal-title">Add Vehicle</h4> 
+            </div> 
+            <div class="modal-header"> 
+                <h4 class="modal-title" style="color:green;">Add Vehicle</h4> 
+            </div> 
+            <form action="#" id="my_form" method="post" onsubmit="addVehicle()">
+            <div class="modal-body"> 
+                <div class="row col-md-12"> 
+                    <div class="col-md-6"> 
+                        <h4>Plate No</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Serial No</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Protocal</h4> 
+                        <p> 
+                            <select class="form-control col-md-12" id="parent_id">
+                                <?php foreach($fleets as $fleet) { ?>
+                                <option value="<?php echo $fleet['ID']; ?>"><?php echo $fleet['GroupName']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </p> 
+                        <h4>Parent Fleet</h4> 
+                        <p> 
+                            <select class="form-control col-md-12" id="parent_id">
+                                <?php foreach($fleets as $fleet) { ?>
+                                <option value="<?php echo $fleet['ID']; ?>"><?php echo $fleet['GroupName']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </p> 
+                    </div> 
+                    <div class="col-md-6"> 
+                        <h4>Channels</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Transmit IP</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Transmit Port</h4> 
+                        <p> <input type="text" id="remark" name="remark" class="col-md-12 form-control"> </p> 
+                    </div> 
+                </div>
+            </div> 
+            <div class="modal-header"> 
+                <h4 class="modal-title" style="color:green;">Channel Set</h4> 
+            </div> 
+            <div class="modal-body"> 
+                <div class="row"> 
+                    <div class="col-md-12"> 
+                        <h4>Plate No</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Serial No</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                    </div> 
+                </div>
+            </div> 
+            <div class="modal-header"> 
+                <h4 class="modal-title" style="color:green;">SIM Card</h4> 
+            </div> 
+            <div class="modal-body"> 
+                <div class="row col-md-12"> 
+                    <div class="col-md-6"> 
+                        <h4>SIM No</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>IMEI</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                    </div> 
+                    <div class="col-md-6">
+                        <h4>IMSI</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Network Module Type</h4> 
+                        <p> 
+                            <select class="form-control col-md-12" id="parent_id">
+                                <?php foreach($fleets as $fleet) { ?>
+                                <option value="<?php echo $fleet['ID']; ?>"><?php echo $fleet['GroupName']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </p> 
+                    </div>
+                </div>
+            </div> 
+            <div class="modal-header"> 
+                <h4 class="modal-title" style="color:green;">Vehicle File</h4> 
+            </div> 
+            <div class="modal-body"> 
+                <div class="row col-md-12"> 
+                    <div class="col-md-6"> 
+                        <h4>Vehicle Type</h4> 
+                        <p> 
+                            <select class="form-control col-md-12" id="parent_id">
+                                <?php foreach($fleets as $fleet) { ?>
+                                <option value="<?php echo $fleet['ID']; ?>"><?php echo $fleet['GroupName']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </p> 
+                        <h4>Factory Grade</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Passenger capacity(person)</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Engine Number</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Chassis Number</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Fuel Type</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>  
+                    </div> 
+                    <div class="col-md-6">
+                    <h4>Road Transport Certificate</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>  
+                        <h4>Technical Grade</h4> 
+                        <p> 
+                            <select class="form-control col-md-12" id="parent_id">
+                                <?php foreach($fleets as $fleet) { ?>
+                                <option value="<?php echo $fleet['ID']; ?>"><?php echo $fleet['GroupName']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </p> 
+                        <h4>Validity Period</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>
+                        <h4>Fuel Consumption/100Km(L)</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>  
+                        <h4>Province</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>  
+                        <h4>City</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>  
+                    </div>
+                </div>
+            </div> 
+            <div class="modal-header"> 
+                <h4 class="modal-title" style="color:green;">Equipment File</h4> 
+            </div> 
+            <div class="modal-body"> 
+                <div class="row"> 
+                    <div class="col-md-12"> 
+                        <h4>Device username</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Device password</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p> 
+                        <h4>Factory lot number</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>
+                        <h4>Factory lot time</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>
+                        <h4>Installer</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>     
+                        <h4>Installation date</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>
+                        <h4>Peripheral description</h4> 
+                        <p> <input type="text" name="name" id="name" class="col-md-12 form-control"> </p>     
+                    </div> 
+                </div>
+            </div> 
+            <div class="modal-footer"> 
+                <button type="button" data-dismiss="modal" class="btn dark btn-outline">Close</button> 
+                <button type="submit" id="submit" class="btn red">Ok</button> 
+            </div> 
+            </form>
+        </div> 
+    </div> 
 </div>
 <script>
 $("#kt_tree_1").jstree({

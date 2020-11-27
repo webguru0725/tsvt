@@ -38,6 +38,8 @@ $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/playback', 'Playback::index');
 $routes->get('/fleet', 'Fleet::index');
 $routes->get('/vehicle', 'Vehicle::index');
+$routes->get('/live-view', 'LiveView::index');
+$routes->post('add', 'Fleet::add');
 
 
 

@@ -4,6 +4,7 @@ use CodeIgniter\Model;
 
 class FleetModel extends Model{
   protected $table = 'groupinfo';
+  protected $allowedFields = ['GroupName', 'GroupFatherID', 'Remark'];
  
   // public function getUser()
   // {

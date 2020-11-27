@@ -70,7 +70,7 @@
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="<?= site_url('fleet'); ?>" class="menu-link">
+                                <a href="<?= site_url('live-view'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-laptop"></i>
                                     <span class="menu-text">LiveView</span>
                                 </a>
@@ -142,6 +142,14 @@
                                                     <span></span>
                                                 </i>
                                                 <span class="menu-text">Camera</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">UserRole</span>
                                             </a>
                                         </li>
                                     </ul>
