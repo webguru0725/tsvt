@@ -20,7 +20,7 @@
 		<link href="assets/css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/jstree.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" /> -->
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
@@ -70,4 +70,7 @@
 			display: block;
 			}
 		</style> -->
+		<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+		<script src="assets/js/jstree.bundle.js"></script>
+		<script src="assets/js/treeview.js"></script>
 	</head>

@@ -115,7 +115,7 @@ $("#kt_tree_1").jstree({
         var role_id = id;
         var html = '';
         $.ajax({
-            url: 'userrole/users_ajax_get/' + role_id,
+            url: 'userRole/users_ajax_get/' + role_id,
             type: 'get',
             dataType: 'json',
             success: function(data) {

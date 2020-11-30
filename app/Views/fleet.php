@@ -12,16 +12,16 @@
                 <ul>
                     <li>
                         <a onclick="getPaging(1)">Center</a>
-                        <ul>
+                        <ul id="test">
                             <?php foreach($fleets as $fleet) {/*print_r($fleet);*/
                                 if ($fleet['GroupFatherID'] == 1) {
                                 ?>
-                                <li data-jstree='{ "opened" : true }' onclick="getPaging(<?php echo $fleet['ID']; ?>)">
+                                <li data-jstree='{ "opened" : true }' id="fleet_id_<?php echo $fleet['ID']; ?>" class="items parent">
                                     <?php echo $fleet['GroupName']; ?>
                                     <ul>
                                         <?php foreach($fleets as $row) { ?>
                                             <?php if($fleet['ID'] == $row['GroupFatherID']) { ?>
-                                                <li data-jstree='{ "type" : "file" }' onclick="getPaging(<?php echo $row['ID']; ?>)">
+                                                <li data-jstree='{ "type" : "file" }' id="fleet_id_<?php echo $row['ID']; ?>" class="items child">
                                                     <?php echo $row['GroupName']; ?>
                                                 </li>
                                             <?php } ?>
@@ -214,8 +214,29 @@ $("#kt_tree_1").jstree({
 });
 </script>
 <script>
+
+$("#kt_tree_1").on("select_node.jstree",function (e, data) {
+    var fleet_id = data.node.id.split("_")[2];
+    getPaging(fleet_id);
+});
+    // var childStatus = false;
+    // $(document).on('click', 'li.child', function(){
+    //     console.log(this);
+    //     console.log($(this).attr("id"));
+    //     childStatus = true;
+    // });
+
+
+    // $(document).on('click', 'li.parent', function(){
+    //     if (!childStatus) {
+    //         console.log("parent");
+    //         console.log($(this).attr("id"));
+    //     }
+    // });
+
+
     function getPaging(id)
-    {
+    {alert(id)
         var fleet_id = id;
         var html = '';
         $.ajax({
@@ -226,7 +247,6 @@ $("#kt_tree_1").jstree({
                 var fleets = data['fleets'];
                 var i;
                 var html = '';
-                console.log(fleets)
                 for(i = 0; i < fleets.length; i++)
                 {
                     if(fleet_id == 1)
@@ -303,10 +323,6 @@ $("#kt_tree_1").jstree({
             },
         });
     }
-
-    $("#submit").click(function(){
-        console.log('a=====================');
-    });
 
     function editData(id)
     {
