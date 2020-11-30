@@ -1,5 +1,3 @@
-
-
 <div class="row">
     <div class="col-xl-4">
         <!--begin::Mixed Widget 2-->
@@ -31,28 +29,6 @@
                                     </ul>
                                 </li>
                             <?php }} ?>
-                            <!-- <li data-jstree='{ "opened" : true }'>
-                                initially open
-                                <ul>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                </ul>
-                            </li>
-                            <li data-jstree='{ "opened" : true }'>
-                                initially open
-                                <ul>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                    <li data-jstree='{ "type" : "file" }'>
-                                        Another node
-                                    </li>
-                                </ul>
-                            </li> -->
                         </ul>
                     </li>
                 </ul>

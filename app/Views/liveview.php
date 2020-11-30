@@ -1,7 +1,5 @@
 <div class="row"> 
-    <div class="col-lg-4">
-    </div>
-    <div class="col-lg-8"> 
+    <div class="col-lg-12"> 
         <!--begin::Card--> 
         <div class="card card-custom gutter-b"> 
             <div class="card-header"> 
