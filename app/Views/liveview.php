@@ -1,9 +1,7 @@
-
-
 <div class="row">
     <div class="col-xl-3">
         <!--begin::Mixed Widget 2-->
-        <div class="card card-custom example example-compact gutter-b">
+        <div class="card card-custom example example-compact gutter-b" style="z-index : 100;">
             <div class="card-header">
                 <div class="card-title">
                     <h3 class="card-label">Basic Tree</h3>
@@ -57,8 +55,11 @@
         </div>
         <!--end::Mixed Widget 2-->
     </div>
-</div>
-<div id="mymap">
+    <div class="col-xl-9">
+        <div id="mymap">
+        </div>
+    </div>
+    
 </div>
 <script>
 $("#kt_tree_1").jstree({

@@ -32,13 +32,11 @@
 			#mymap {
 				width: 100%;
 				height: 500px;
-				z-index: -1;
-				position: absolute;
-				top:100px;
 			}
 		</style>
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk"></script>
-		
+		<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBxN-oDTcZ9oaovUk8XIRBj5-JW7OKvS5s"></script> -->
+		<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script> -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxN-oDTcZ9oaovUk8XIRBj5-JW7OKvS5s&libraries=places&callback=initMapSettings" async defer></script>
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" /> -->
 		<!-- Hotjar Tracking Code for keenthemes.com -->
