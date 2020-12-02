@@ -20,6 +20,7 @@
 		<link href="assets/css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/jstree.bundle.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="../third-resource/metronic47/global/css/components.min.css" rel="stylesheet" type="text/css" /> -->
 		<!-- <link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" /> -->
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
@@ -27,6 +28,17 @@
 		<!-- <link rel="shortcut icon" href="assets/media/logos/favicon.ico" /> -->
 		<link rel="shortcut icon" href="http://51.77.84.46:12056/favicon.ico" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+		<style>
+			#mymap {
+				width: 100%;
+				height: 500px;
+				z-index: -1;
+				position: absolute;
+				top:100px;
+			}
+		</style>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk"></script>
+		
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" /> -->
 		<!-- Hotjar Tracking Code for keenthemes.com -->

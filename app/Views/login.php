@@ -1,10 +1,7 @@
+<body style="height:100%; background-image: url('assets/images/background.png');  background-repeat: no-repeat;
+  background-size: cover;" >
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 mt-5 pt-3 pb-3">
-	
-<h3 align="center">Welcome to Tura V. 1.0</h3>
-	
-	</div>
 	
 	<div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 mt-5 pt-3 pb-3 bg-white from-wrapper">
 	  
