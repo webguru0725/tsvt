@@ -236,7 +236,7 @@ $("#kt_tree_1").on("select_node.jstree",function (e, data) {
 
 
     function getPaging(id)
-    {alert(id)
+    {
         var fleet_id = id;
         var html = '';
         $.ajax({
@@ -326,7 +326,6 @@ $("#kt_tree_1").on("select_node.jstree",function (e, data) {
 
     function editData(id)
     {
-        alert(id);
         $.ajax({
             url: 'fleet/fleet_ajax_get/' + id,
             type: 'get',

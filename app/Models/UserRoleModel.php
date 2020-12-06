@@ -4,6 +4,7 @@ use CodeIgniter\Model;
 
 class UserRoleModel extends Model{
     protected $table = 'roleinfo';
+    protected $allowedFields = ['RoleName', 'RoleType', 'RoleFatherID'];
 
     public function getUsersByRoleID($role_id)
     {

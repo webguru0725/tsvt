@@ -42,6 +42,20 @@ class UserRole extends BaseController
         echo json_encode($data);
     }
 
+    public function role_add_ajax_post()
+    {
+        $model = new UserRoleModel();
+        $role_name = $this->request->getPost('role_name');
+        $parent_role_id = $this->request->getPost('parent_role_id');
+        $data = [
+            'RoleName' => $role_name,
+            'RoleFatherID' => $parent_role_id,
+            'RoleType' => 1
+        ];
+        $save = $model->insert($data);
+        echo json_encode($save);
+    }
+
 	//--------------------------------------------------------------------
 
 }

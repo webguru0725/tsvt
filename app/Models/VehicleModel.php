@@ -13,4 +13,13 @@ class VehicleModel extends Model{
   //   return $query->result_array();
   // }
 
+  public function getVehiclesWithDevice()
+  {
+      $db = \Config\Database::connect();
+      $builder = $db->table('vehicledevice');
+      
+      return $builder->join('devicefile', 'vehicledevice.ID = devicefile.VehicleDeviceID')->get()->getResult();
+      // return $builder->join('userinfo', 'userinfo.RoleID =' $role_id, 'left')->join('registerlogin', 'registerlogin.ID = userinfo.RegisterLoginID', 'left')->where(['ID' => $role_id])->get()->getResult();
+  }
+
 }

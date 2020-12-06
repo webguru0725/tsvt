@@ -20,6 +20,8 @@
 		<link href="assets/css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/jstree.bundle.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js" integrity="sha512-YY0CZ0d6Wavco6rNJERWAoUJX9jCnRlcwK1MtKon8IzhT189p6rgX7f6ikViiSsv3PLYozgsVJDzdxiVz3IXjw==" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.js" integrity="sha512-3o5c2VekAg9ZZgcmddbSufUCJjqqY7uypQUa2JeCCgLjVKA1KOfqrMMGwbgP9tCszbZXhG7agevYBh2sm3I0JA==" crossorigin="anonymous"></script>
 		<!-- <link href="../third-resource/metronic47/global/css/components.min.css" rel="stylesheet" type="text/css" /> -->
 		<!-- <link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" /> -->
 		<!--end::Global Theme Styles-->
@@ -32,6 +34,24 @@
 			#mymap {
 				width: 100%;
 				height: 500px;
+			}
+
+			.grid-container {
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-gap: 2px;
+				background-color: #000000;
+				padding: 2px;
+			}
+
+			video {
+				max-width:100%;
+			}
+
+			.grid-container > div {
+				background-color: rgba(255, 255, 255, 0.8);
+				text-align: center;
+				font-size: 30px;
 			}
 		</style>
 		<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBxN-oDTcZ9oaovUk8XIRBj5-JW7OKvS5s"></script> -->

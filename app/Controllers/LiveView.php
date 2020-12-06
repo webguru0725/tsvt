@@ -3,6 +3,7 @@ use App\Libraries\Googlemaps;
 use APP\Libraries\VideoStream;
 use App\Models\FleetModel;
 use App\Models\VehicleModel;
+use App\Models\DeviceModel;
 use CodeIgniter\Config\Config;
 
 class LiveView extends BaseController
@@ -28,6 +29,14 @@ class LiveView extends BaseController
 		$fleets = $model_fleet->findAll();
 		$model_vehicle = new VehicleModel();
 		$vehicles = $model_vehicle->findAll();
+		$model_device = new DeviceModel();
+
+		for($i = 0; $i < count($vehicles); $i++)
+		{
+			$device = $model_device->where('VehicleDeviceID', $vehicles[$i]['ID'])->first();
+			$vehicles[$i]['channel'] = $device['ChannelCount'];
+		}
+		
 		$data['fleets'] = $fleets;
 		$data['vehicles'] = $vehicles;
 		echo view('templates/header');
