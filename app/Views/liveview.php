@@ -77,9 +77,12 @@
         <div id="mymap">
         </div>
     </div>
-    <div class="card card-custom example example-compact gutter-b" id="showVideoButton" style="margin-left:auto; width: 20px; height: 20px; display:show; text-align: center;">
+    <!-- <div class="card card-custom example example-compact gutter-b" id="showVideoButton" style="margin-left:auto; width: 20px; height: 20px; display:show; text-align: center;">
         <a href="javascript:viewvideo()" style="text-align: center;"><<</a>
-    </div>
+    </div> -->
+    <button draggable="false" id="showVideoButton" title="Toggle fullscreen view" aria-label="Toggle fullscreen view" type="button" class="gm-control-active gm-fullscreen-control" style="background: none rgb(255, 255, 255);border: 0px;margin: 10px;padding: 0px;text-transform: none;appearance: none;position: absolute;cursor: pointer;user-select: none;border-radius: 2px;height: 40px;width: 40px;box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;overflow: hidden;top: 110px;right: 0px;">
+        <a href="javascript:viewvideo()" style="text-align: center;"><<</a>
+    </button>
     <div class="col-xl-6 pull-right" id="videocard" style="margin-left:auto; display:none;">
         <div class="card card-custom example example-compact gutter-b" style="z-index : 1;">
             <div class="card-header">
