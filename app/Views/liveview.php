@@ -1,5 +1,5 @@
-<div class="row" style="max-width : 100%">
-    <div class="col-xl-3">
+<div class="row col-md-12" style="max-width : 100%">
+    <div class="col-md-3">
         <!--begin::Mixed Widget 2-->
         <div class="card card-custom example example-compact gutter-b" style="z-index : 100;">
             <div class="card-header">
@@ -73,7 +73,7 @@
         </div>
         <!--end::Mixed Widget 2-->
     </div>
-    <div class="col-xl-12" style="position: absolute;">
+    <div class="col-md-12" style="position: absolute;">
         <div id="mymap">
         </div>
     </div>
