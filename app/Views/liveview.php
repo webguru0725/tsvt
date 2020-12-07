@@ -77,8 +77,8 @@
         <div id="mymap">
         </div>
     </div>
-    <div class="card card-custom example example-compact gutter-b" id="showVideoButton" style="margin-left:auto; width: 20px; height: 20px; display:show">
-        <a href="javascript:viewvideo()"><<</a>
+    <div class="card card-custom example example-compact gutter-b" id="showVideoButton" style="margin-left:auto; width: 20px; height: 20px; display:show; text-align: center;">
+        <a href="javascript:viewvideo()" style="text-align: center;"><<</a>
     </div>
     <div class="col-xl-6 pull-right" id="videocard" style="margin-left:auto; display:none;">
         <div class="card card-custom example example-compact gutter-b" style="z-index : 1;">
@@ -170,10 +170,10 @@ $("#kt_tree_1").jstree({
         $('#videocard').show();
         $('#showVideoButton').hide();
         var vehicle_id = $(this).attr("id");
-        // var device_id = $(this).attr("device_id");
-        // var channel_count = $(this).attr("channel_count");
-        var device_id = '0099016054';
-        var channel_count = 2;
+        var device_id = $(this).attr("device_id");
+        var channel_count = $(this).attr("channel_count");
+        // var device_id = '0099016054';
+        // var channel_count = 2;
         var i;
         var html = '';
         for(i = 1; i <= channel_count; i++)

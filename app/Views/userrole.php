@@ -8,7 +8,7 @@
                     <a href="#" style="color:#FF0000; margin-left:80px;" class="font-green" data-target="#stack1" data-toggle="modal" title="Add role">
                         <i class="fa fa-plus"></i>
                     </a>
-                    <a href="javascript:editData('<?php echo $fleet['ID']; ?>');" style="color:#FF0000; margin-left:10px;" class="font-green" title="Edit role">
+                    <a href="#" style="color:#FF0000; margin-left:10px;" class="font-green" title="Edit role">
                         <i class="fa fa-edit"></i>
                     </a>
                     <a href="#" style="color:#FF0000; margin-left:10px;" class="font-green" title="Delete role">
