@@ -53,6 +53,40 @@
 				text-align: center;
 				font-size: 30px;
 			}
+
+			.loaderss {
+				border: 16px solid #f3f3f3;
+				border-radius: 50%;
+				border-top: 16px solid #3498db;
+				width: 20px;
+				height: 20px;
+				
+				animation: spin 2s linear infinite;
+			}
+
+			@-webkit-keyframes spin {
+			0% { -webkit-transform: rotate(0deg); }
+			100% { -webkit-transform: rotate(360deg); }
+			}
+
+			@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+			}
+
+			#myProgress {
+			width: 30%;
+			background-color: #ddd;
+			}
+
+			#myBar {
+			width: 100%;
+			height: 30px;
+			background-color: #4CAF50;
+			text-align: center;
+			line-height: 30px;
+			color: white;
+			}
 		</style>
 		<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBxN-oDTcZ9oaovUk8XIRBj5-JW7OKvS5s"></script> -->
 		<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script> -->

@@ -60,15 +60,15 @@
                 <i class="icon-info font-blue-steel"></i><span style="font-size:16px; color:green;">INFO</span>
                 </div>
                 
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Plate No.</p><p style="margin-left:10%" id="plateno"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Serial No.</p><p style="margin-left:10%" id="serialno"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Fleet Name.</p><p style="margin-left:10%" id="fleetname"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Speed.</p><p style="margin-left:10%" id="speed"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Direction.</p><p style="margin-left:10%" id="direction"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Time.</p><p style="margin-left:10%" id="time"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Longitude.</p><p style="margin-left:10%" id="longitude"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Latitude.</p><p style="margin-left:10%" id="latitude"></p></div>
-                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Location.</p><p style="margin-left:10%"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Plate No.</p><p style="margin-left:10%; margin-bottom:0px;" id="plateno"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Serial No.</p><p style="margin-left:10%; margin-bottom:0px;" id="serialno"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Fleet Name.</p><p style="margin-left:10%; margin-bottom:0px;" id="fleetname"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Speed.</p><p style="margin-left:10%; margin-bottom:0px;" id="speed"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Direction.</p><p style="margin-left:10%; margin-bottom:0px;" id="direction"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Time.</p><p style="margin-left:10%; margin-bottom:0px;" id="time"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Longitude.</p><p style="margin-left:10%; margin-bottom:0px;" id="longitude"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Latitude.</p><p style="margin-left:10%; margin-bottom:0px;" id="latitude"></p></div>
+                <div class="row col-md-12"><p class="col-md-6" style="margin-bottom:0px;">Location.</p><p style="margin-left:10%; margin-bottom:0px;"></p></div>
             </div>
         </div>
         <!--end::Mixed Widget 2-->
@@ -86,17 +86,23 @@
     <div class="col-xl-6 pull-right" id="videocard" style="margin-left:auto; display:none;">
         <div class="card card-custom example example-compact gutter-b" style="z-index : 1;">
             <div class="card-header">
-                <div class="card-title">
+                <div class="card-title container">
                     <h3 class="card-label">VIDEO</h3>
                     <a href="javascript:hiddenvideo()">>></a>
-                    <a href="#"><i class="fa fa-arrows-alt"></i></a>
+                    <!-- <p id="counting">d</p> -->
+                    <div class="loaderss" id="loading" style="margin-left: auto; display: none;"></div>
+                    
                 </div>
             </div>
             <div class="card-body">
+                
                 <div class="grid-container" id="videopanel">
-                    <div class="item2"><video></video></div>
-                    <div class="item2"><video></video></div>                                                             
-                </div>                                                         
+                    <!-- <div class="item2"><video></video></div>
+                    <div class="item2"><video></video></div>                                                              -->
+                </div>  
+                <div id="myProgress" style="margin-left: auto; margin-top: 10px;">
+                    <div id="myBar">40 sec</div>
+                </div>                                                       
                 <!-- <video id="videoElement" width="80%" height="800px"></video>                                                     -->
             </div>
         </div>
@@ -169,37 +175,105 @@ $("#kt_tree_1").jstree({
     }
 
     $(document).on('dblclick', 'li.vehicle', function(){
-        alert("s")
         $('#videocard').show();
         $('#showVideoButton').hide();
         var vehicle_id = $(this).attr("id");
-        var device_id = $(this).attr("device_id");
-        var channel_count = $(this).attr("channel_count");
-        // var device_id = '0099016054';
-        // var channel_count = 2;
+        alert(vehicle_id);
+        // var device_id = $(this).attr("device_id");
+        // var channel_count = $(this).attr("channel_count");
+
+        $.ajax({
+            url: 'liveView/vehicle_ajax_get/' + vehicle_id,
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+                console.log(data)
+                document.getElementById("plateno").innerHTML = data[0]['CarLicence'];
+                document.getElementById("serialno").innerHTML = data[0]['DeviceID'];
+                document.getElementById("fleetname").innerHTML = data[0]['GroupName'];
+            },
+            error: function(data) {
+                alert("no");
+            },
+        });
+        var device_id = '0099015FCA';
+        var channel_count = 2;
         var i;
         var html = '';
+        var flvPlayer = [];
         for(i = 1; i <= channel_count; i++)
         {
-            html += '<div class="item2"><video id="videoElement'+i+'"></video></div>';
+            html += '<div class="item2" id="video"><video id="videoElement'+i+'"></video></div>';
         }
         $('#videopanel').html(html);
 
         if (flvjs.isSupported()) {
             for(i = 1; i <= channel_count; i++)
             {
+                
                 var videoElement = document.getElementById("videoElement"+i);
                 var url = 'http://51.77.84.46:12062/live.flv?devid='+device_id+'&chl='+i+'&svrid=127.0.0.1&svrport=17891&st=1&audio=1';
                 alert(url)
-                var flvPlayer = flvjs.createPlayer({
+                flvPlayer[i-1] = flvjs.createPlayer({
                     type: 'flv',
                     url: 'http://51.77.84.46:12062/live.flv?devid='+device_id+'&chl='+i+'&svrid=127.0.0.1&svrport=17891&st=1&audio=1'
                 });
-                flvPlayer.attachMediaElement(videoElement);
-                flvPlayer.load();
-                flvPlayer.play();
+                $('#loading').show();
+                flvPlayer[i-1].attachMediaElement(videoElement);
+                flvPlayer[i-1].load();
+                flvPlayer[i-1].play();
+                // document.getElementById("video").innerHTML = "Loading";
+                
+                setTimeout(() => {
+                    $('#loading').hide();
+                    // flvPlayer[i-1].play();
+                }, 8000);
+               
+                // var time = 40;
+                // var elem = document.getElementById("myBar");
+                // var timerId = setInterval(function() {
+                    
+                //     // if(time <= 30)
+                //     // {
+                //     //     document.getElementById("counting").innerHTML = time;
+                //     // }
+                //     if(time <= 0)
+                //     {
+                //         flvPlayer.unload();
+                //         clearInterval(timerId);
+                //     }
+                //     time--;
+                //     elem.style.width = 100*time/40 + "%";
+                //     elem.innerHTML = time  + "%";
+                // }, 1000);
+                // setTimeout(() => {
+                //     flvPlayer.close();
+                // }, 7000);
             }
             
         }
+        var time = 40;
+        var elem = document.getElementById("myBar");
+
+        var timerId = setInterval(function() {
+            
+            // if(time <= 30)
+            // {
+            //     document.getElementById("counting").innerHTML = time;
+            // }
+            if(time <= 0)
+            {
+                for(i = 1; i <= channel_count; i++)
+                {
+                    flvPlayer[i-1].unload();
+                }
+                clearInterval(timerId);
+                // flvPlayer.unload();
+            }
+            time--;
+            elem.style.width = 100*time/40 + "%";
+            elem.innerHTML = time  + "sec";
+        }, 1000);
+        
     });
 </script>

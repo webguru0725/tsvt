@@ -43,7 +43,14 @@ class LiveView extends BaseController
 		echo view('templates/menu');
 		echo view('liveview', $data);
 		echo view('templates/footer');
-    }
-    
+	}
+	
+	public function vehicle_ajax_get($id)
+	{
+		$model_vehicle = new VehicleModel();
+		$vehicle = $model_vehicle->getVehiclebyID($id);
+		echo json_encode($vehicle);
+	}
+	
 	//--------------------------------------------------------------------
 }
