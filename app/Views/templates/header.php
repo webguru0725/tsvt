@@ -20,8 +20,12 @@
 		<link href="assets/css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/jstree.bundle.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="https://www.htmlelements.com/demos/source/styles/smart.default.css" />
+		<link rel="stylesheet" type="text/css" href="https://www.htmlelements.com/demos/styles/demos.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js" integrity="sha512-YY0CZ0d6Wavco6rNJERWAoUJX9jCnRlcwK1MtKon8IzhT189p6rgX7f6ikViiSsv3PLYozgsVJDzdxiVz3IXjw==" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.js" integrity="sha512-3o5c2VekAg9ZZgcmddbSufUCJjqqY7uypQUa2JeCCgLjVKA1KOfqrMMGwbgP9tCszbZXhG7agevYBh2sm3I0JA==" crossorigin="anonymous"></script>
+		<script type="module" src="https://www.htmlelements.com/demos/source/modules/smart.calendar.js"></script> 
+    	<script type="module" src="index.js"></script>	
 		<!-- <link href="../third-resource/metronic47/global/css/components.min.css" rel="stylesheet" type="text/css" /> -->
 		<!-- <link href="assets/css/jqvmap.css" rel="stylesheet" type="text/css" /> -->
 		<!--end::Global Theme Styles-->

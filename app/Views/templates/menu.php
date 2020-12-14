@@ -76,6 +76,12 @@
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
+                                <a href="<?= site_url('playback'); ?>" class="menu-link">
+                                    <i class="menu-icon flaticon2-laptop"></i>
+                                    <span class="menu-text">Playback</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
                                 <a href="<?= site_url('fleet'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-console"></i>
                                     <span class="menu-text">Evidence Center</span>
