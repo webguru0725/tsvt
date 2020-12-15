@@ -16,8 +16,7 @@
 	<script src="assets/js/scripts.bundle.js"></script>
 	
 	<script src="assets/js/apexcharts.js"></script>
-	<script src="assets/js/jqvmap.js"></script>
-	<script src="assets/js/jqvmap.bundle.js"></script>
+	
 	<!--end::Global Theme Bundle-->
 	<!--begin::Page Vendors(used by this page)-->
 	<script src="assets/js/fullcalendar.bundle.js"></script>

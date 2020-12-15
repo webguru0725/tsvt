@@ -144,4 +144,7 @@
 		<script src="assets/js/jstree.bundle.js"></script>
 		<script src="assets/js/smart.calendar.js"></script>
 		<script src="assets/js/treeview.js"></script>
+		<script src="assets/js/jqvmap.bundle.js"></script>
+		<script src="assets/js/jqvmap.js"></script>
+		
 	</head>

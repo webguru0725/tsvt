@@ -15,7 +15,7 @@
    </div>
 </div> -->
 
-<div class="row col-md-12" style="max-width : 100%">
+<div class="row" style="max-width : 100%">
     <div class="col-md-3">
         <!--begin::Mixed Widget 2-->
         <div class="card card-custom example example-compact gutter-b" style="z-index : 100;">
@@ -73,6 +73,7 @@
                 <i class="fa fa-line-chart font-green-jungle" style="margin-left:10px;"></i><span>23</span>
             </div>
             <div class="card-footer">
+                                                                                
                 <div class="smart-demo-container">             
                     <template id="templateWithButtons">
                         <smart-button class="material flat">CANCEL</smart-button>
@@ -83,12 +84,13 @@
                         <section id="datePickers">
                             <div class="module">
                                 <div>
-                                    <smart-calendar selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtons"></smart-calendar>
+                                    <smart-calendar style="width: 100%; min-width: 100%;" selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtons"></smart-calendar>
                                 </div>
                             </div>
                         </section>   
                     </div>
-                </div>                                                               
+                </div>  
+                                                                             
             </div>
         </div>
         <!--end::Mixed Widget 2-->
@@ -194,10 +196,17 @@ $("#kt_tree_1").jstree({
         $('#showVideoButton').show();
     }
 
-    function cal()
+    function date(pa)
     {
+        alert(pa);
         alert("s");
+        var x = $("div.smart-calendar-weeks").html();
+        alert(x);
     }
+
+    $(".smart-calendar-weeks").click(function() {
+        alert("sdf");
+    });
 
     $(document).on('dblclick', 'li.vehicle', function(){
         $('#videocard').show();

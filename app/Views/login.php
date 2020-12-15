@@ -1,4 +1,4 @@
-<body style="height:100%; background-image: url('assets/images/background.png');  background-repeat: no-repeat;
+<body style="height:100%; background-image: url('assets/images/background2.jpg');  background-repeat: no-repeat;
   background-size: cover;" >
 <div class="container">
   <div class="row">
