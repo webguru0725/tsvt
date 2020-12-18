@@ -93,6 +93,13 @@
 			line-height: 30px;
 			color: white;
 			}
+
+			.login {
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 30%;
+			margin-left: 33%; }
 		</style>
 		<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyBxN-oDTcZ9oaovUk8XIRBj5-JW7OKvS5s"></script> -->
 		<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" async defer></script> -->

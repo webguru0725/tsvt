@@ -84,7 +84,7 @@
                         <section id="datePickers">
                             <div class="module">
                                 <div>
-                                    <smart-calendar style="width: 100%; min-width: 100%;" selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtons"></smart-calendar>
+                                    <smart-calendar style="width: 100%; min-width: 100%;" selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtons" onclick="date(this.value)"></smart-calendar>
                                 </div>
                             </div>
                         </section>   

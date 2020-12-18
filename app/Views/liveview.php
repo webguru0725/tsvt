@@ -1,5 +1,5 @@
 <div class="row col-md-12" style="max-width : 100%">
-    <div class="col-md-3">
+    <div class="col-md-3" style="min-width: 300px;">
         <!--begin::Mixed Widget 2-->
         <div class="card card-custom example example-compact gutter-b" style="z-index : 100;">
             <div class="card-header">
