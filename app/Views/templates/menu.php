@@ -82,7 +82,7 @@
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="<?= site_url('fleet'); ?>" class="menu-link">
+                                <a href="<?= site_url('evidence'); ?>" class="menu-link">
                                     <i class="menu-icon flaticon2-console"></i>
                                     <span class="menu-text">Evidence Center</span>
                                 </a>
@@ -103,10 +103,99 @@
                                         </li>
                                         <li class="menu-item" aria-haspopup="true">
                                             <a href="#" class="menu-link">
+                                                <i class="fa fa-th-large">
+                                                </i>
+                                                <span class="menu-text">Report Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="fa fa-paper-plane">
+                                                </i>
+                                                <span class="menu-text">GPS position statistics</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="fa fa-bell">
+                                                </i>
+                                                <span class="menu-text">Alarm statistics</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
                                                 <i class="menu-bullet menu-bullet-line">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">Report Dashboard</span>
+                                                <span class="menu-text">User operation log</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">OverSpeed Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">User Online/Offline Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Mileage statistics</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Driving time report</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="fa fa-user">
+                                                </i>
+                                                <span class="menu-text">Online rate statistics</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="fa fa-user">
+                                                </i>
+                                                <span class="menu-text">Emergency button Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="fa fa-user">
+                                                </i>
+                                                <span class="menu-text">Motion Alarm Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="fa fa-user">
+                                                </i>
+                                                <span class="menu-text">Last status log</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="#" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Fence Report</span>
                                             </a>
                                         </li>
                                     </ul>

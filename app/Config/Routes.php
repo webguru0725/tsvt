@@ -40,6 +40,7 @@ $routes->get('/fleet', 'Fleet::index');
 $routes->get('/vehicle', 'Vehicle::index');
 $routes->get('/live-view', 'LiveView::index');
 $routes->get('/userrole', 'UserRole::index');
+$routes->get('/evidence', 'Evidence::index');
 
 $routes->post('add', 'Fleet::add');
 

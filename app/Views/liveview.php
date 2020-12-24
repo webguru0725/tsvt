@@ -175,6 +175,7 @@ $("#kt_tree_1").jstree({
     }
 
     $(document).on('dblclick', 'li.vehicle', function(){
+        alert("sdf")
         $('#videocard').show();
         $('#showVideoButton').hide();
         $('#myProgress').show();
@@ -201,31 +202,25 @@ $("#kt_tree_1").jstree({
         console.log(sss);
         var p = 4;
         var guid = 1607482749202;
+
         $.ajax({
-            headers: {"Accept": "application/json", 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': '*', 'Access-Control-Expose-Headers': '*', 'Access-Control-Allow-Credentials': true},
-            // headers: {"Accept": "application/json"},
-            url: 'http://51.77.84.46:12056/report/last-status/last-gps-info',
-            // headers: {'Cookie': "ac2=MTYwNzUxNzA2OCo5Mio0Yg%3D%3D;wcms5u=eyJ1aWQiOjEsInJpZCI6MSwidW4iOiJhZG1pbiIsInZlIjpudWxsfQ; wcms5s=1607517073; wcms5c={%22L%22:%22en-US%22%2C%22V%22:%226.2.0.0%22%2C%22HP%22:8090%2C%22FP%22:[12060%2C12061%2C12062%2C12063]%2C%22TP%22:17891%2C%22RP%22:3113%2C%22SU%22:%22KMH%22%2C%22MT%22:%22GMap_EN%22%2C%22AT%22:%223%22%2C%22E%22:%22on%22%2C%22isJump%22:false%2C%22MK%22:%22AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk%22%2C%22T%22:%221%22%2C%22ET%22:1607484656686}; io=9FwrG9Ryh6WaKnzyAAAX"},
-            cache:		false,
+            url: 'http://51.77.84.46:12056/report/last-status/last-gps-info',
+            cache: false,
             crossDomain: true,
-            xhrFields:	{withCredentials:true},
+            setCookies: "wcms5c={%22L%22:%22en-US%22%2C%22V%22:%226.2.0.0%22%2C%22HP%22:8090%2C%22FP%22:[12060%2C12061%2C12062%2C12063]%2C%22TP%22:17891%2C%22RP%22:3113%2C%22SU%22:%22KMH%22%2C%22MT%22:%22GMap_EN%22%2C%22AT%22:%223%22%2C%22E%22:%22on%22%2C%22isJump%22:false%2C%22MK%22:%22AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk%22%2C%22T%22:%221%22%2C%22ET%22:1607484656686};",
             type:		"POST",
             contentType: "application/json",
-            // headers:	{"Cookie":"wcms5u=eyJ1aWQiOjEsInJpZCI6MSwidW4iOiJhZG1pbiIsInZlIjpudWxsfQ; ac2=MTYwNzUxMDc5NSo4MioxZg%3D%3D; wcms5s=1607510800; wcms5c={%22L%22:%22en-US%22%2C%22V%22:%226.2.0.0%22%2C%22HP%22:8090%2C%22FP%22:[12060%2C12061%2C12062%2C12063]%2C%22TP%22:17891%2C%22RP%22:3113%2C%22SU%22:%22KMH%22%2C%22MT%22:%22GMap_EN%22%2C%22AT%22:%223%22%2C%22E%22:%22on%22%2C%22isJump%22:false%2C%22MK%22:%22AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk%22%2C%22T%22:%221%22%2C%22ET%22:1607478383682}; io=WXpL7iU5-USOxfXqAAAS"},
-            // cookie:		"wcms5u=eyJ1aWQiOjEsInJpZCI6MSwidW4iOiJhZG1pbiIsInZlIjpudWxsfQ; ac2=MTYwNzUxMDc5NSo4MioxZg%3D%3D; wcms5s=1607510800; wcms5c={%22L%22:%22en-US%22%2C%22V%22:%226.2.0.0%22%2C%22HP%22:8090%2C%22FP%22:[12060%2C12061%2C12062%2C12063]%2C%22TP%22:17891%2C%22RP%22:3113%2C%22SU%22:%22KMH%22%2C%22MT%22:%22GMap_EN%22%2C%22AT%22:%223%22%2C%22E%22:%22on%22%2C%22isJump%22:false%2C%22MK%22:%22AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk%22%2C%22T%22:%221%22%2C%22ET%22:1607478383682}; io=WXpL7iU5-USOxfXqAAAS",
             dataType: 'json',
-            data: {"vehicleIds": p, "guid": guid, "token": ""},
-            // beforeSend: function(xhr) {
-            //     xhr.setRequestHeader("Cookie", 'ac2=MTYwNzUxNzA2OCo5Mio0Yg%3D%3D;wcms5u=eyJ1aWQiOjEsInJpZCI6MSwidW4iOiJhZG1pbiIsInZlIjpudWxsfQ; wcms5s=1607517073; wcms5c={%22L%22:%22en-US%22%2C%22V%22:%226.2.0.0%22%2C%22HP%22:8090%2C%22FP%22:[12060%2C12061%2C12062%2C12063]%2C%22TP%22:17891%2C%22RP%22:3113%2C%22SU%22:%22KMH%22%2C%22MT%22:%22GMap_EN%22%2C%22AT%22:%223%22%2C%22E%22:%22on%22%2C%22isJump%22:false%2C%22MK%22:%22AIzaSyBcdRP1MKeic1gp_CT1Afd5Gew1IautTWk%22%2C%22T%22:%221%22%2C%22ET%22:1607484656686}; io=9FwrG9Ryh6WaKnzyAAAX');  
-            // },
+            xhrFields: {
+                'withCredentials': true
+            },
+           
             success: function(data) {
                 console.log(data);
-                // alert("ok");
-                
             },
             error: function(err) {
+                console.log("ERROR");
                 console.log(err);
-                // alert("nwo");
             },
         });
         var device_id = '0099015FCA';
